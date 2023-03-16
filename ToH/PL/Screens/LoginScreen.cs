@@ -22,7 +22,7 @@ public class LoginScreen : Screen
         _printer.PrintLine("Write username:");
     }
 
-    public override void Text(IUi ui, string username)
+    public override void Text(IUi ui, string? username)
     {
         if (string.IsNullOrEmpty(username))
         {

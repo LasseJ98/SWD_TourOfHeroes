@@ -16,6 +16,9 @@ var screenFactory = new ScreenFactory(heroesController, sessionController, print
 var initScreen = screenFactory.CreateScreen(typeof(LoginScreen));
 
 var controller = new Controller();
-var ui = new Ui(controller, initScreen, log, screenFactory);
+if (initScreen != null)
+{
+	var ui = new Ui(controller, initScreen, log, screenFactory);
+}
 
 controller.ListenForInput();
